@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins';
+    padding-top: 120px;
+}
+
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* lebih tinggi dari dropdown */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: white;
+  color: #333;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 30px;
+  height: 30px;
+}
+
+.company-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.mail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mail img {
+  width: 25px;
+  height: 25px;
+}
+
+.contact-info {
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact img {
+  width: 25px;
+  height: 25px;
+}
+
+.contact-info a {
+  color: #666;
+  text-decoration: none;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 0;
+}
+
+.menubar {
+  position: fixed;
+  top: 60px; /* geser ke bawah setelah .topbar (tinggi topbar sekitar 60px) */
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: white;
+  padding: 10px 30px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 5px 0;
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 30px;
+  background-color: white;
+  list-style: none;
+  padding: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: 30px;
+  height: 20px;
+  position: relative;
+  z-index: 102;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .image-container {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    margin-right: 50px;
+    margin-top: 50px;
+  }
+
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 29px 20px 0 rgba(255, 38, 0, 0.87);
+}
+
+  .content-container {
+    flex: 2;
+    padding: 20px;
+  }
+
+  .content-container h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+
+  .content-container p {
+    margin-bottom: 15px;
+    text-align: justify;
+  }
+
+  .content-container ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .content-container li {
+    margin-bottom: 10px;
+    list-style: none;
+  }
+
+  .content-container li::before {
+    content: '✔️';
+    margin-right: 8px;
+    color: #FF3D00;
+  }
+
+  footer {
+    background-color: #f2f2f2;
+    padding: 20px 0;
+    margin-top: 40px;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .footer-logo-group {
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .footer-logo-group {
+      margin-bottom: 10px;
+      justify-content: center;
+    }
+
+  }
+
+  /* Responsive Design */
+@media screen and (max-width: 992px) {
+  /* Tablet and smaller */
+  .hamburger {
+      display: block;
+  }
+  
+  .menubar {
+      padding: 15px 30px;
+  }
+  
+  .nav-links {
+      position: fixed;
+      top: 0;
+      right: -300px;
+      width: 250px;
+      height: 100vh;
+      background-color: white;
+      flex-direction: column;
+      padding: 80px 20px 30px;
+      z-index: 101;
+      transition: right 0.3s ease;
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-links.active {
+      right: 0;
+  }
+  
+  .dropdown-menu {
+      position: static;
+      display: none;
+      box-shadow: none;
+      border: none;
+      padding-left: 20px;
+      width: 100%;
+      background-color: #f8f8f8;
+  }
+  
+  .dropdown.open .dropdown-menu {
+      display: block;
+  }
+  
+  .dropdown-menu li {
+      margin-bottom: 8px;
+  }
+  
+  .nav-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 100;
+  }
+  
+  .nav-overlay.active {
+      display: block;
+  }
+  
+  .hero-title {
+      font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Mobile */
+  .topbar {
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+  }
+  
+  .contact-info {
+      flex-direction: column;
+      gap: 15px;
+  }
+  
+  .contact-info span {
+      display: none;
+  }
+  
+  .hero-title {
+      font-size: 28px;
+  }
+  
+  .hero-subtitle {
+      font-size: 16px;
+  }
+  
+  .whyus-image img {
+      box-shadow: 15px 15px 0px rgba(255, 38, 0, 0.87);
+  }
+  
+  .whyus-text h2 {
+      font-size: 26px;
+  }
+  
+  .secure-section {
+      padding: 80px 20px;
+  }
+  
+  .secure-left h2 {
+      font-size: 1.8rem;
+  }
+  
+  .secure-right {
+      width: 100%;
+      justify-content: center;
+      margin-top: 20px;
+  }
+  
+  .footer-content {
+      flex-direction: column;
+      gap: 30px;
+  }
+}
+

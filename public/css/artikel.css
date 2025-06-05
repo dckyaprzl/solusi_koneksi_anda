@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins';
+}
+
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: white;
+    color: #333;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 30px;
+    height: 30px;
+}
+
+.company-name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.mail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mail img {
+    width: 25px;
+    height: 25px;
+}
+
+.contact-info {
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact img {
+    width: 25px;
+    height: 25px;
+}
+
+.contact-info a {
+    color: #666;
+    text-decoration: none;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 0;
+}
+
+.menubar {
+    background-color: white;
+    padding: 10px 30px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 5px 0;
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 30px;
+    background-color: white;
+    list-style: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.hero {
+  position: relative;
+    background: url('../img/bg.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  
+  .artikel-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 10px;
+    padding: 20px 5%;
+  }
+  
+  .artikel-card {
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: relative;
+    padding-bottom: 15px;
+    width: 390px;
+    height: 500px;
+  }
+  
+  .artikel-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .tanggal {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #e60023;
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .tanggal .day {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .tanggal .month {
+    font-size: 12px;
+    display: block;
+  }
+  
+  .artikel-card h3 {
+    margin: 15px;
+    font-size: 16px;
+  }
+  
+  .artikel-card p {
+    margin: 0 15px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .kategori {
+    margin: 15px;
+    font-size: 12px;
+    color: #888;
+    font-style: italic;
+  }
+  
+  footer {
+    background: #f0f0f0;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    margin-top: 40px;
+  }
+
+/*detail artikel*/
+  .hero-detail {
+    position: relative;
+    background-image: url("../img/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    /* Sesuaikan tinggi sesuai kebutuhan */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2em;
+  }
+  
+  .detail-container {
+    width: 80%;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .detail-container img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .detail-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .detail-container .kategori {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+  
+  .detail-container p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .btn-kembali {
+    display: inline-block;
+    background: red;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+  }
+  
