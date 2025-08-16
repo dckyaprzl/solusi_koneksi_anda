@@ -59,7 +59,7 @@
                 </p>
             </div>
             <div class="secure-right">
-                <a href="https://wa.me/6281295312290" class="cta-button">6281295312290</a>
+                <a href="https://wa.me/6281295312290" class="cta-button"><p>{{ $kontak->phone ?? 'phone' }}</p></a>
             </div>
         </div>
     </section>

@@ -23,7 +23,7 @@
   <!-- MAIN CONTENT -->
   <div class="wrapper">
     <div class="sidebar">
-      <h3>Produk</h3>
+      <h3>Galeri</h3>
       @foreach ($daftarGaleri as $item)
         <a href="{{ route('galeri.show', $item->slug) }}"
            class="{{ $item->slug === $galeri->slug ? 'active' : '' }}">
